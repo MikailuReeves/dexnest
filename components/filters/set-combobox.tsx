@@ -14,6 +14,7 @@ import {
   CommandGroup,
   CommandInput,
   CommandItem,
+  CommandList,
 } from "@/components/ui/command";
 import { cn } from "@/lib/utils";
 
@@ -50,28 +51,30 @@ export function SetCombobox({
             placeholder="Search sets..."
           />
           <CommandEmpty>No set found.</CommandEmpty>
-          <CommandGroup>
-            {items.map((name) => (
-              <CommandItem
-                key={name}
-                value={name}
-                onSelect={(current) => {
-                  const next = current === selected ? undefined : current;
-                  setSelected(next);
-                  onChange?.(next ?? "");
-                  setOpen(false);
-                }}
-              >
-                <Check
-                  className={cn(
-                    "mr-2 h-4 w-4 text-primary",
-                    selected === name ? "opacity-100" : "opacity-0",
-                  )}
-                />
-                {name}
-              </CommandItem>
-            ))}
-          </CommandGroup>
+          <CommandList>
+            <CommandGroup>
+              {items.map((name) => (
+                <CommandItem
+                  key={name}
+                  value={name}
+                  onSelect={(current) => {
+                    const next = current === selected ? undefined : current;
+                    setSelected(next);
+                    onChange?.(next ?? "");
+                    setOpen(false);
+                  }}
+                >
+                  <Check
+                    className={cn(
+                      "mr-2 h-4 w-4 text-primary",
+                      selected === name ? "opacity-100" : "opacity-0",
+                    )}
+                  />
+                  {name}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
         </Command>
       </PopoverContent>
     </Popover>

@@ -1,5 +1,3 @@
-import { Icon } from "lucide-react";
-
 export function BugIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -17,7 +15,7 @@ export function BugIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function DarkIcon(props: React.SVGProps<SVGSVGElement>) {
+export function DarknessIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +47,7 @@ export function DragonIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function ElectricIcon(props: React.SVGProps<SVGSVGElement>) {
+export function LightningIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +191,7 @@ export function IceIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function NormalIcon(props: React.SVGProps<SVGSVGElement>) {
+export function ColorlessIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -257,7 +255,7 @@ export function RockIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SteelIcon(props: React.SVGProps<SVGSVGElement>) {
+export function MetalIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -291,9 +289,9 @@ export function WaterIcon(props: React.SVGProps<SVGSVGElement>) {
 
 export const TYPE_ICON_MAP = {
   Bug: BugIcon,
-  Dark: DarkIcon,
+  Darkness: DarknessIcon,
   Dragon: DragonIcon,
-  Electric: ElectricIcon,
+  Lightning: LightningIcon,
   Fairy: FairyIcon,
   Fighting: FightingIcon,
   Fire: FireIcon,
@@ -302,11 +300,11 @@ export const TYPE_ICON_MAP = {
   Grass: GrassIcon,
   Ground: GroundIcon,
   Ice: IceIcon,
-  Normal: NormalIcon,
+  Colorless: ColorlessIcon,
   Poison: PoisonIcon,
   Psychic: PsychicIcon,
   Rock: RockIcon,
-  Steel: SteelIcon,
+  Metal: MetalIcon,
   Water: WaterIcon,
 } as const;
 

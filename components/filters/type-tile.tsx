@@ -23,13 +23,13 @@ export function TypeTile({
       type="button"
       onClick={onClick}
       className={cn(
-        "flex h-16 w-full flex-col items-center justify-center gap-2 rounded-xl border transition tracking-tight",
+        "flex h-16 w-full flex-col items-center justify-center gap-2 rounded-2xl border transition tracking-tight",
         selected
-          ? "bg-primary/10 border-primary/40"
-          : "bg-card border-border hover:bg-muted/50",
+          ? "bg-primary/10 border-primary/40 text-primary"
+          : "bg-background border-border hover:bg-accent",
       )}
     >
-      <Icon className={cn(iconSize, "text-primary")} />
+      <Icon className={cn(iconSize)} />
       <span className="text-xs font-medium">{type}</span>
     </button>
   );

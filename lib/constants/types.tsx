@@ -1,8 +1,8 @@
 export const TYPES = [
   "Bug",
   "Dragon",
-  "Dark",
-  "Electric",
+  "Darkness",
+  "Lightning",
   "Fairy",
   "Fighting",
   "Fire",
@@ -11,11 +11,11 @@ export const TYPES = [
   "Grass",
   "Ground",
   "Ice",
-  "Normal",
+  "Colorless",
   "Poison",
   "Psychic",
   "Rock",
-  "Steel",
+  "Metal",
   "Water",
 ] as const;
 

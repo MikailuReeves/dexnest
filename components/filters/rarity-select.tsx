@@ -23,7 +23,7 @@ export function SetRaritySelector({
   values,
   action: onChange,
 }: {
-  items: string[];
+  items: readonly string[];
   values?: string[];
   action?: (v: string[]) => void;
 }) {
@@ -44,8 +44,8 @@ export function SetRaritySelector({
   };
 
   const selectAll = () => {
-    setSelected(items);
-    onChange?.(items);
+    setSelected([...items]);
+    onChange?.([...items]);
   };
 
   return (
@@ -118,10 +118,12 @@ export function SetRaritySelector({
             >
               <span>{rarity}</span>
               <button
+                type="button"
+                aria-label={`Remove ${rarity}`}
                 onClick={() => toggleRarity(rarity)}
                 className="opacity-70 hover:opacity-100"
               >
-                x
+                ×
               </button>
             </div>
           ))}
