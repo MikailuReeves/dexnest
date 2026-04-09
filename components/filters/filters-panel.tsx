@@ -58,6 +58,9 @@ export function FiltersPanel({
   };
 
   const handleReset = () => {
+    setSet("");
+    setRarities([]);
+    setTypes([]);
     router.replace(pathname);
   };
 

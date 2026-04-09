@@ -39,7 +39,7 @@ export function SetCombobox({
           aria-expanded={open}
           className="w-full justify-between text-muted-foreground"
         >
-          {selected ?? "Select set..."}
+          {selected || "Select set..."}
           <ChevronsUpDown className="ml-2 h-4 opacity-50" />
         </Button>
       </PopoverTrigger>

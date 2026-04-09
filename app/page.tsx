@@ -78,8 +78,16 @@ export default async function Home({
       `name.ilike.%${searchQuery}%,local_id.ilike.%${searchQuery}%`,
     );
 
-  const { data: cards, count } = await query
-    .order("created_at", { ascending: false })
+  const orderColumn =
+    sortField === "number"
+      ? "local_id_int"
+      : sortField === "name"
+        ? "name"
+        : "created_at";
+
+  const { data: cards, count } = await query // 'count' for pagination later.
+    .order(orderColumn, { ascending: sortDirection === "asc" })
+    .order("set_id", { ascending: true }) // secondary: group same numbers by set
     .range(from, to);
 
   return (
